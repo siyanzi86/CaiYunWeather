@@ -7,7 +7,7 @@ class CaiYunWeatherApplication : Application() {
 
     companion object {
         lateinit var context: Context
-        const val TOKEN = "" //令牌
+        const val TOKEN = "HJB1drUNgDbmS6qw" //令牌
     }
 
     override fun onCreate() {

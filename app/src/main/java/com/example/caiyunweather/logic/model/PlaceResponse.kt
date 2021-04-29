@@ -3,7 +3,7 @@ package com.example.caiyunweather.logic.model
 import com.google.gson.annotations.SerializedName
 
 
-data class PlaceResponse(val status: String, val place: List<Place>)
+data class PlaceResponse(val status: String, val places: List<Place>)
 
 data class Place(
     val name: String,
