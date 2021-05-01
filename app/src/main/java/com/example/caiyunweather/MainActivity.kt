@@ -12,19 +12,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    private val viewModel by lazy { ViewModelProvider(this).get(PlaceViewModel::class.java) }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        text.setOnClickListener {
-            viewModel.run { searchPlaces(edit_query.text.toString()) }
-        }
-
-        viewModel.placeLiveData.observe(this, Observer { it ->
-            val result = it.getOrNull()
-            if (result != null) {
-                println(result[0])
-            }
-        })
     }
 }
